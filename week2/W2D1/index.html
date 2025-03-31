@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--this is a comment in HTML-->
+    <!--<head> loads first, tells browser info about how to inerpret our page-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="K PIERSON">
+    <meta name="description" content="W2D1 Demo">
+
+    <title>W#2 | Demo #1</title>
+</head>
+<body>
+    <p>Take us to the bottom <a href="#w2">list</a> of the page!</p>
+    <!--the <body> element holds ALL CONTENT FOR THE PAGE!-->
+    <!--there should only ever be ONE <head> and ONE <body>-->
+
+    <!--Block Level Elements: Building blocks of page! Create main structure (both organizational and content-wise)-->
+
+    <!--heading [1-6] are just like heading styles in Word-->
+    <h1 id="top" style="border:1px solid red">Heading 1</h1> <!--ONLY ONE PER PAGE for Search Engine Optimization (SEO)-->
+    <h2 style="border:1px solid green">Heading 2</h2>
+    <h3 style="border:1px solid blue">Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!--HORIZONTAL RULE below <hr> : creates seperation between sections of page-->
+    <hr>
+
+    <!--DIVs are dividers/divisions - they do not contain "content", they contain and help organize other HTML elements-->
+    <div style="background-color:black; color:white;">
+        <h2 id="list">List Types in HTML</h2>
+
+        <!--ordered list-->
+        <ol>
+            <!--add a list item for each line item in the list-->
+            <li>Jiu Jitsu</li>
+            <li>Pickleball</li>
+            <li>Riding Motorcycles</li>
+        </ol>
+
+        <!--unordered list-->
+        <ul>
+            <!--add a list item for each line item in the list-->
+            <li>Drogon</li>
+            <li>Rhaegal</li>
+            <li>Viserion</li>
+        </ul>
+
+
+    </div>
+
+    <hr>
+
+    <h2>Basic Paragraph Text + in-Line Tags</h2>
+
+    <!--In-Line Elements DO NOT create structure, they are used *in line* of another HTML element! They usually add visual style or emphasis, help support SEO, or support data management-->
+
+    <!--<p> for paragraph (block level element)-->
+    <p>Hello my name is <b>Ken</b> 
+        <br><!--break space - creates a new empty line-->
+        and I have <i>one</i> dog named <u>Hazel!</u>
+    </p>
+
+    <!--in line for SEO support-->
+    <p>The <strong>strong</strong> tag makes content appear bolder.</p>
+    <p>The <em>emphasis</em> tag makes content appear italicized</p>
+
+    <p><b><i><u>C O M B O</u></i></b></p>
+
+    <hr>
+    <!--continuing into Week 2 with basic tags :D-->
+    <h2 id="w2">W2D1 - Intro to img, a, and id attributes</h2>
+
+    <!--add a link to neit.edu-->
+    <!--This is an example of an ABSOLUTE Path (starts with protocol)-->
+
+    <h4>Check out my school's website: <a href="https://www.neit.edu" target="_blank">neit.edu</a></h4>
+    <!--target="_blank" opens the link in a new tab-->
+
+    <!--link to our W1 Demowebpage-->
+    <!--since this week2 older lived within a largern "SE111_202530" folder, we can create RELATIVE Paths to other content housed within "SE111_202530"-->
+    <p>My first HTML demo can be found <a href="../../week1/demo/index.html" target="_blank">here</a> for your review</p>
+
+    <!--in page "jump" link below; utilizes #idValue-->
+    <p>Take us back to the <a href="#top">top</a> of the page!</p>
+    <p>Take us back to the <a href="#list">list</a> of the page!</p>
+
+    <hr>
+
+    <h2>Images!</h2>
+
+    <!--It is always safest to use RELATIVE file paths with out image content (these are resources that live directly in our website's root folder)-->
+    <!--Avoid ABSOLUTE image paths (We have less control!)-->
+
+    <img src="images/meca.jpg" alt="The front enterance of MECA's porteous Building" width="500px" title="MECA!">
+
+    <br>
+
+    <img src="images/stormsEnd.jpg" alt="Storms End" width="500px" title="Storms End!">
+
+</body>
+</html>
