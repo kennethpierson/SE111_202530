@@ -6,7 +6,40 @@
     <meta name="author" content="K Pierson">
     <meta name="description" content="Week 3 | Multi-Page Bio">
     <title>W3 | Multi-Page Bio</title>
+
+    <!--IN-DOCUMENT CSS BELOW-->
+    <style>
+
+         /*selecting elements by their tag type*/
+         body {
+            /*property: value*/
+            background-color: grey;
+        }
+
+        div {
+            /*these style changes will apply to ALL divs in the page! When selecting by tage, all tags of that type are affected*/
+            /*border:1px solid black;*/
+
+            /*padding adds space between content and boarder*/
+            padding:10px; /*applies to all 4 sides: top, right, bottom, left*/
+
+            /*margin adds space between boarder and other elements*/
+            margin:10px;/*applies to all 4 sides: top, right, bottom, left*/
+
+        }
+
+        #wrapper {
+            width:980px;
+            margin:auto; /*auto equal left and right space when width is applied*/
+
+            background-color: rgb(184, 176, 176);
+            color:black; /*color changes FONT color!*/
+        }
+
+    </style>
+
 </head>
+
 <body>
 
     <!--#Wrapper div to "wrap around" all content of the page-->
