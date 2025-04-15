@@ -5,10 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="K Pierson">
     <meta name="description" content="W4D1 | Demo">
-    <title>W4 | Empire Records</title>
+    <title>Empire Records | About</title>
 
     <!--IN-DOCUMENT CSS BELOW-->
     <style>
+
+        body {
+            background-color:rgb(73, 73, 73);
+            /*background-image: url(realative path of image);*/
+
+        }
+
+        #wrapper {
+            background-color: white;
+            color: black;
+
+            width:980px;
+            margin:auto; /*adds equal space to left and right of element, MUST have a width specified first!*/
+
+            padding:10px; /*adds 10px of space to all four sides */
+        }
+
+        #nav {
+            border:2px solid rgb(240, 252, 3);
+            padding:10px;
+            margin:10px;
+
+            border-radius: 100px;
+
+            box-shadow:5px 5px 5px black;
+        }
+
+        #buttons {
+            /*border:1px solid rgb(252, 152, 3);*/
+            height: 50px;
+            width: 510px;
+            margin: auto;
+        }
+
+        .nav-btn {
+            width:150px;
+            height:50px;
+
+            text-align:center; /*x-axis alignment*/
+            line-height:50px;
+
+            background-color: grey;
+
+            float:left;
+            display: block;
+
+            margin-right:10px;
+            margin-left: 10PX;
+
+            text-decoration:none;
+
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav-btn:hover {
+            background-color: blue;
+            color: grey;
+
+            font-style: bold;
+           /* background-image: url(relative path);*/
+        }
+
+        /*
         div {
             border:1px solid rgb(1, 204, 1);
             padding:10px;          
@@ -22,6 +86,8 @@
         #main-content {
             margin:0;
         }
+        */
+
     </style>
 
 </head>
@@ -36,16 +102,20 @@
         <div id="header">
             
             <h1><em>Empire Records</em></h1>
-            <h4><i>"Damn the man, save the Empire"</i></h4>
+            <h4><i>"Damn the man, save the Empire!"</i></h4>
 
         </div><!--/#header-->
 
         <!--#NAV-->
         <div id="nav">
 
-            <a href="index.html" class="nav-btn">Home</a>
-            <a href="cast.html" class="nav-btn">Cast</a>
-            <a href="review.html" class="nav-btn">Review</a>
+            <div id="buttons">
+
+                <a href="index.html" class="nav-btn">HOME</a>
+                <a href="cast.html" class="nav-btn">CAST</a>
+                <a href="review.html" class="nav-btn">REVIEW</a>
+
+            </div>
 
         </div><!--/#nav-->
 
@@ -54,7 +124,7 @@
         <!--#MAIN-CONTENT-->
         <div id="content">
 
-            <h2>All About <em>Empire Records</em></h2>
+            <h2>All About<em>Empire Records</em></h2>
 
             <div id="main-content">
 
