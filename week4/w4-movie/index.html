@@ -5,23 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="K Pierson">
     <meta name="description" content="Week 4 | Movie Site">
-    <title>W4 | Movie Site</title>
+    <title>Goodfellas | About</title>
 
     <!--IN-DOCUMENT CSS BELOW-->
     
     <style>
-        div {
-            border:1px solid rgb(1, 204, 1);
-            padding:10px;          
+    body {
+            background-color:rgb(73, 73, 73);
+            /*background-image: url(realative path of image);*/
+
+        }
+
+        #wrapper {
+            background-color: rgb(184, 176, 176);
+            color: black;
+
+            width:980px;
+            margin:auto; /*adds equal space to left and right of element, MUST have a width specified first!*/
+
+            padding:10px; /*adds 10px of space to all four sides */
+        }
+
+        #nav {
+            border:2px solid rgb(125, 50, 72);
+            padding:10px;
             margin:10px;
+
+            border-radius: 100px;
+
+            box-shadow:5px 5px 5px black;
         }
 
-        h1, h2, a, img {
-            border:1px solid red;
+        #buttons {
+            /*border:1px solid rgb(252, 152, 3);*/
+            height: 50px;
+            width: 510px;
+            margin: auto;
         }
 
-        #main-content {
-            margin:0;
+        .nav-btn {
+            width:150px;
+            height:50px;
+
+            text-align:center; /*x-axis alignment*/
+            line-height:50px;
+
+            background-color: rgb(125, 50, 72);
+            color: rgb(255, 255, 251);
+
+            float:left;
+            display: block;
+
+            margin-right:10px;
+            margin-left: 10PX;
+
+            text-decoration:none;
+
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav-btn:hover {
+            background-color: rgb(255, 255, 251);
+            color: rgb(125, 50, 72);
+
+            font-style: bold;
+           /* background-image: url(relative path);*/
         }
     </style>
 
@@ -36,17 +85,21 @@
         <!--HEADER-->
         <div id="header">
             
-            <h1><em>Movie Title</em></h1>
-            <h4><i>"As far back as I can remeber I've always wanted to be a gangster!"</i></h4>
+            <h1><em>Goodfellas</em></h1>
+            <h4><i>"As far back as I can remember, I've always wanted to be a gangster."</i></h4>
 
         </div><!--/#header-->
 
         <!--#NAV-->
         <div id="nav">
 
-            <a href="index.html" class="nav-btn">Home</a>
-            <a href="cast.html" class="nav-btn">Cast</a>
-            <a href="review.html" class="nav-btn">Review</a>
+            <div id="buttons">
+
+                <a href="index.html" class="nav-btn">Home</a>
+                <a href="cast.html" class="nav-btn">Cast</a>
+                <a href="review.html" class="nav-btn">Review</a>
+
+            </div><!--/#buttons-->
 
         </div><!--/#nav-->
 
@@ -55,9 +108,23 @@
         <!--#MAIN-CONTENT-->
         <div id="content">
 
-            <h2>All About <em>Movie Title</em></h2>
+            <h2>All About<em>Goodfellas</em></h2>
 
             <div id="main-content">
+
+                <p>A <i>brief</i> (1-2 sentence) summary of your <em>Movie Choice</em></p>
+
+                <img src="images/Goodfellas_MoviePoster.png" alt="Offical poster for Goodfellas (1990)"  style="width:100%">
+
+                <div class="info">
+
+                    <p><b>Production Company:</b> Warner Bros.</p>
+                    <p><b>Release Date:</b>:</b> September 21, 1990</p>
+                    <p><b>Genre:</b> Biography, Crime, Drama</p>
+                    <p><b>Rating:</b> R</p>
+                    <p><b>Run Time:</b> 2 hours and 25 minutes</p>                  
+
+                </div><!--/ .info-->
 
             </div><!--/#main-content-->
            
