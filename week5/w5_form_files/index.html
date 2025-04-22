@@ -15,7 +15,10 @@
 <body>
     <!--Build your Table and Form here-->
     <h1>Birthday Party Registration Form</h1>
-    <table>
+    
+    <form method="GET" action="confirm.html"></form>
+      <table>
+      
         <thead>
           <tr>
             <td>Labels</td>
@@ -44,11 +47,12 @@
             <td>Child's Age</td>
             <td>
                 <form>
-                <input type="number" name="childage" id="childage" placeholder="Child's Age" required>
+                <input type="number" name="childage" id="childage" min="1"  placeholder="Child's Age" required>
                 </form>
             </td>
           </tr>
-        </table>
+      </table>
+    </form>
 
 </body>
 </html>

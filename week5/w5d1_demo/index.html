@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W5D1 | Table and Forms</title>
-
+    
     <style>
         table {
             border:1px solid blue;
@@ -14,6 +14,7 @@
             border:1px solid black;
         }
     </style>
+    
 </head>
 <body>
     <h1>W5D1 | Tables & Forms</h1>
@@ -72,19 +73,99 @@
           </tr>
 
           <tr>
-            <td><label for="firstname">First Name</label></td>
+            <td><label for="firstname">First Name:</label></td>
             <td><input type="text" name="firstname" id="firstname" placeholder="First Name" required></td>
           </tr>
 
           <tr>
-            <td><label for="lastname">Last Name</label></td>
+            <td><label for="lastname">Last Name:</label></td>
             <td><input type="text" name="lastname" id="lastname" placeholder="Last Name" required></td>
           </tr>
 
           <tr>
-            <td><label for="password">Password</label></td>
+            <td><label for="password">Password:</label></td>
             <td><input type="password" name="password" id="password" placeholder="Password" required></td>
           </tr>
+
+          <tr>
+            <td><label for=email>Email:</label></td>
+            <td><input type="email" name="email" id="email" placeholder="youremail@email.com" required></td>
+          </tr>
+
+          <tr>
+            <td><label for=comments>Comments:</label></td>
+            <td><textarea name=comments id="comments" placeholder="Enter Comment Here" rows="10" cols="21" style="font-family: 'Times New Roman', Times, serif;"></textarea></td>
+          </tr>
+
+          <!--Drop Downs: the -->
+          <tr>
+
+            <!--LABEL / LEFT COLUMN-->
+            <td>
+              <label for="faveColor">Pick Your Favorite Color</label>
+            </td>
+
+            <!--ENTRY / RIGHT COLUMN-->
+            <td>
+              <select name="faveColor" id="faveColor">
+                <option value="red">RED</option>
+                <option value="green">GREEN</option>
+                <option value="blue">BLUE</option>
+              </select>
+            </td>
+
+          </tr>
+
+
+          <!--RADIO BUTTONS-->
+
+           <!--LABEL / LEFT COLUMN-->
+          <td>
+            <label for="study">Program of Study</label>
+          </td>
+
+          <!--ENTRY / RIGHT COLUMN-->
+          <td>
+            <input type="radio" name="study" value="SE">Software Engineering<br>
+            <input type="radio" name="study" value="CYB">Cybersecurity<br>
+            <input type="radio" name="study" value="NE">Network Engineering<br>
+          </td>
+
+        </tr>
+
+        <!--Check Boxes-->
+
+        <tr>
+
+          <td>
+            <label for="vehicle">Select Your Vehicle(s)</label>
+          </td>
+
+          <td>
+            <input type="checkbox" name="vehicle" value="car">Car<br>
+            <input type="checkbox" name="vehicle" value="roci">The Rocinante<br>
+            <input type="checkbox" name="vehicle" value="motorcycle">Motorcycle<br>
+          </td>
+
+        </tr>
+
+
+        <!--DATE: creates a calendar-->
+
+        <tr>
+
+          <td>
+            <label for="date">Date:</label>
+          </td>
+
+          <td>
+            <input type="date" name="date" id="date" value="2025-08-01"><br>
+          </td>
+
+        </tr>
+
+
+
 
           <tr>
             <td></td>
