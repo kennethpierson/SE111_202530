@@ -16,7 +16,7 @@
     <!--Build your Table and Form here-->
     <h1>Birthday Party Registration Form</h1>
     
-    <form method="GET" action="confirm.html"></form>
+    <form method="GET" action="confirm.html">
       <table>
       
         <thead>
@@ -25,32 +25,27 @@
             <td><b>Form Fields</b></td>
           </tr>
         </thead>
+
         <tbody>
           <tr>
             <td>Parent/Guardian Name</td>
             <td>
-              <form>
               <input type="text" name="gfirst" id="g-first" placeholder="First Name" maxlength="20" required>
               <input type="text" name="glast" id="g-last" placeholder="Last Name" maxlength="20" required>
-              </form>
             </td>
           </tr>
 
           <tr>
             <td>Child's First Name</td>
             <td>
-              <form>
               <input type="text" name="cfirst" id="c-first" placeholder="Child's First Name" required>
-              </form>
             </td>
           </tr>
 
           <tr>
             <td>Child's Age</td>
             <td>
-              <form>
               <input type="number" name="age" id="age" min="1"  placeholder="Child's Age" required>
-              </form>
             </td>
           </tr>
 
@@ -62,27 +57,21 @@
           <tr>
             <td>Date</td>
             <td>
-              <form>
               <input type="date" name="date" required>
-              </form>
             </td>
           </tr>
 
           <tr>
             <td>Start Time</td>
             <td>
-              <form>
               <input type="time" name="time" required>
-              </form>
             </td>
           </tr>
 
           <tr>
             <td>Number of Guests</td>
             <td>
-              <form>
               <input type="number" name="guest" value="5">
-              </form>
             </td>
           </tr>
 
@@ -94,37 +83,31 @@
           <tr>
             <td>Size</td>
             <td>
-              <form>
-                <input type="radio" name="size" value="sm">sm
-                <input type="radio" name="size" value="med">med
-                <input type="radio" name="size" value="lg">lg
-              </form>
+              <input type="radio" name="size" value="sm">sm
+              <input type="radio" name="size" value="med">med
+              <input type="radio" name="size" value="lg">lg
             </td>
           </tr>
 
           <tr>
             <td>Drinks</td>
             <td>
-              <form>
-                <input type="checkbox" name="drink1" value="coke">Coke<br>
-                <input type="checkbox" name="drink2" value="sprite">Sprite<br>
-                <input type="checkbox" name="drink3" value="fruit punch">Fruit Punch<br>
-                <input type="checkbox" name="drink4" value="lemonade">Lemonade<br>
-                <input type="checkbox" name="drink5" value="iced tea">Iced Tea
-              </form>
+              <input type="checkbox" name="drink1" value="coke">Coke<br>
+              <input type="checkbox" name="drink2" value="sprite">Sprite<br>
+              <input type="checkbox" name="drink3" value="fruit punch">Fruit Punch<br>
+              <input type="checkbox" name="drink4" value="lemonade">Lemonade<br>
+              <input type="checkbox" name="drink5" value="iced tea">Iced Tea
             </td>
           </tr>
 
           <tr>
             <td>Cake</td>
             <td>
-              <form>
-                <select name="cake">
-                  <option value="chocolate">Chocolate</option>
-                  <option value="vanilla">Vanilla</option>
-                  <option value="bringOwn">I'll bring my own</option>
-                </select>
-              </form>
+              <select name="cake">
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="bringOwn">I'll bring my own</option>
+              </select>
             </td>
           </tr>
 
@@ -152,7 +135,8 @@
             <td><input type="submit" value="Submit"></td>
           </tr>
           
+        </tbody>  
       </table>
-
+    </form>
 </body>
 </html>
