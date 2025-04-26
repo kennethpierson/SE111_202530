@@ -21,38 +21,138 @@
       
         <thead>
           <tr>
-            <td>Labels</td>
-            <td>Form Fields</td>
+            <td><b>Labels</b></td>
+            <td><b>Form Fields</b></td>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Parent/Guardian Name</td>
             <td>
-                <form>
-                <input type="text" name="firstname" id="first" placeholder="First Name" required>
-                <input type="text" name="lastname" id="last" placeholder="Last Name" required>
-                </form>
+              <form>
+              <input type="text" name="gfirst" id="g-first" placeholder="First Name" maxlength="20" required>
+              <input type="text" name="glast" id="g-last" placeholder="Last Name" maxlength="20" required>
+              </form>
             </td>
           </tr>
+
           <tr>
             <td>Child's First Name</td>
             <td>
-                <form>
-                <input type="text" name="childname" id="childfirst" placeholder="Child's First Name" required>
-                </form>
+              <form>
+              <input type="text" name="cfirst" id="c-first" placeholder="Child's First Name" required>
+              </form>
             </td>
           </tr>
+
           <tr>
             <td>Child's Age</td>
             <td>
-                <form>
-                <input type="number" name="childage" id="childage" min="1"  placeholder="Child's Age" required>
-                </form>
+              <form>
+              <input type="number" name="age" id="age" min="1"  placeholder="Child's Age" required>
+              </form>
             </td>
           </tr>
+
+          <tr>
+            <td><b>Date and Time</b></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Date</td>
+            <td>
+              <form>
+              <input type="date" name="date" required>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Start Time</td>
+            <td>
+              <form>
+              <input type="time" name="time" required>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Number of Guests</td>
+            <td>
+              <form>
+              <input type="number" name="guest" value="5">
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Food</b></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Size</td>
+            <td>
+              <form>
+                <input type="radio" name="size" value="sm">sm
+                <input type="radio" name="size" value="med">med
+                <input type="radio" name="size" value="lg">lg
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Drinks</td>
+            <td>
+              <form>
+                <input type="checkbox" name="drink1" value="coke">Coke<br>
+                <input type="checkbox" name="drink2" value="sprite">Sprite<br>
+                <input type="checkbox" name="drink3" value="fruit punch">Fruit Punch<br>
+                <input type="checkbox" name="drink4" value="lemonade">Lemonade<br>
+                <input type="checkbox" name="drink5" value="iced tea">Iced Tea
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Cake</td>
+            <td>
+              <form>
+                <select name="cake">
+                  <option value="chocolate">Chocolate</option>
+                  <option value="vanilla">Vanilla</option>
+                  <option value="bringOwn">I'll bring my own</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Color Scheme</td>
+            <td>
+              <select name="color">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="pink">Pink</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Additional Comments</td>
+            <td>
+              <textarea name=comments placeholder="Please add any additional comments"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"></td>
+          </tr>
+          
       </table>
-    </form>
 
 </body>
 </html>
