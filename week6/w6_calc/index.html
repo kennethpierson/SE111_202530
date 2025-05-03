@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ken Pierson">
+    <meta name="description" content="Week 6 JavaScript Pay Calculator">
+
+    <title>Week 6 | JavaScript Pay Calculator</title>
+
+</head>
+<body>
+
+    <h1>Week 6 | JavaScript Pay Calculator</h1>
+
+    <script>
+        
+        var hourly_rate = prompt("Enter your hourly rate: $")
+        var hours_worked = prompt("Enter hours worked for the Pay Period:")
+
+        hourly_rate = Number(hourly)
+        hours_worked = Number(hours)
+
+        var grossPay = hourly_rate * hours_worked
+        var taxes = grossPay * 20/100
+        var netPay = grossPay - taxes
+
+        alert(`Gross Pay: = ${grossPay}`)
+        alert(`Uncle Sam's Share: = ${taxes}`)
+        alert(`Net Pay: = ${netPay}`)
+
+        console.log(`Gross Pay: = ${grossPay}`)
+
+    </script>
+    
+</body>
+</html>
