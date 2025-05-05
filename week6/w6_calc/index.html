@@ -15,21 +15,18 @@
 
     <script>
         
-        var hourly_rate = prompt("Enter your hourly rate: $")
-        var hours_worked = prompt("Enter hours worked for the Pay Period:")
-
-        hourly_rate = Number(hourly)
-        hours_worked = Number(hours)
+        var hourly_rate = Number(prompt("Enter your hourly rate: $"))
+        var hours_worked = Number(prompt("Enter hours worked for the Pay Period:"))
 
         var grossPay = hourly_rate * hours_worked
         var taxes = grossPay * 20/100
         var netPay = grossPay - taxes
 
-        alert(`Gross Pay: = ${grossPay}`)
-        alert(`Uncle Sam's Share: = ${taxes}`)
-        alert(`Net Pay: = ${netPay}`)
-
-        console.log(`Gross Pay: = ${grossPay}`)
+        alert(`Gross Pay: = $${grossPay.toFixed(2)}\n Uncle Sam's Share: = $${taxes.toFixed(2)}\n Net Pay: = $${netPay.toFixed(2)}`)
+        
+        console.log(`Gross Pay: = $${grossPay.toFixed(2)}`)
+        console.log(`Uncle Sam's Share: = $${taxes.toFixed(2)}`)
+        console.log(`Net Pay: = $${netPay.toFixed(2)}`)
 
     </script>
     
