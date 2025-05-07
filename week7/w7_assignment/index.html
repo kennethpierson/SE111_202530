@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--edit the meta tag below to hold YOUR name!-->
-    <meta name="author" content="__YOUR NAME HERE!__">
+    <meta name="author" content="Ken Pierson">
     <meta name="description" content="Week 7 Assignment practicing Javascript & HTML">
     <title>Week 7 | Pay Form Calculator Assignment</title>
 </head>
@@ -17,35 +17,71 @@
    <!--each <input> must have an id that matches its corresponding label -->
    <!--each form element is separated by a break space (new line) -->
     <form>
-        <label for="first">First Name: </label>
-        <input type="text" id="">
+
+        <table>
+            <tr>
+                <td>
+                    <label for="first">First Name: </label>
+                </td>
+
+                <td>
+                    <input type="text" id="first">
+                </td>
+            </tr>
 
         <br>
 
-        <label for="last">Last Name: </label>
-        <input type="text" id="">
+            <tr>
+                <td>
+                    <label for="last">Last Name: </label>
+                </td>
+
+                <td>
+                    <input type="text" id="last">
+                </td>
+            </tr>
 
         <br>
 
-        <label for="hours">Hours Worked: </label>
-        <input type="text" id="">
+            <tr>
+                <td>
+                    <label for="hours">Hours Worked: </label>
+                </td>
+
+                <td>
+                    <input type="text" id="">
+                </td>
+            </tr>
 
         <br>
 
-        <label for="rate">Hourly Rate: </label>
-        <input type="text" id="">
+            <tr>
+                <td>
+                    <label for="rate">Hourly Rate: </label>
+                </td>
+
+                <td>
+                    <input type="text" id="">
+                </td>
+            </tr>
 
         <br>
-
-        <br>
-
-
-
+        
         <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
-        <input type="button" id="" value="Enter">
+            <tr>             
+                <td>  
+                </td>
+                
+                <td> 
+                    <input type="button" id="enter-button" value="ENTER"> 
+                </td>
+            </tr>
+        </table>
 
-        <br>
-        <br>
+    </form>
+
+<br>
+<br>
 
         <div id="final" style="border:1px solid rgb(87, 86, 86); padding:15px; background-color:rgb(168, 168, 168);">
 
@@ -64,7 +100,9 @@
                 *success will be determined if correct info is displayed in the alert()-->
         <h3><i>If the above information is correct, please press "SUBMIT"</i></h3>
         <input type="button" id="submit" value="SUBMIT">
-    </form>
+
+        
+    
 
     <script>
         //edit the below statement to select the #enter-button id from the HTML file
@@ -76,11 +114,11 @@
         {
             //get each *value* from the form elements (first name, last name, hours worked, hourly rate) and store them into vars
 
-            /*USE THE FOLLOWING VARIABLE NAMES:
-            fname --> first name, #first
-            lname --> last name, #last
-            hours --> hours worked, #hours
-            rate --> hourly rate, #rate */
+            //USE THE FOLLOWING VARIABLE NAMES:
+            //fname --> first name: #first
+            //lname --> last name: #last
+            //hours --> hours worked, #hours
+            //rate --> hourly rate, #rate 
             
 
 
@@ -109,7 +147,7 @@
             
 
             //console.log() all three processed values, rounded to the second decimal place
-            console.log(.toFixed(2))
+            console.log().toFixed(2)
 
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
