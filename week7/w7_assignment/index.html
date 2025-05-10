@@ -21,7 +21,7 @@
         <table>
             <tr>
                 <td>
-                    <label for="first">First Name: </label>
+                    <label for="first" class="questions">First Name: </label>
                 </td>
 
                 <td>
@@ -33,7 +33,7 @@
 
             <tr>
                 <td>
-                    <label for="last">Last Name: </label>
+                    <label for="last" class="questions">Last Name: </label>
                 </td>
 
                 <td>
@@ -45,7 +45,7 @@
 
             <tr>
                 <td>
-                    <label for="hours">Hours Worked: </label>
+                    <label for="hours" class="questions">Hours Worked: </label>
                 </td>
 
                 <td>
@@ -57,7 +57,7 @@
 
             <tr>
                 <td>
-                    <label for="rate">Hourly Rate: </label>
+                    <label for="rate" class="questions">Hourly Rate: </label>
                 </td>
 
                 <td>
@@ -83,17 +83,17 @@
 <br>
 <br>
 
-        <div id="final" style="border:1px solid rgb(87, 86, 86); padding:15px; background-color:rgb(168, 168, 168);">
+    <div id="final" style="border:1px solid rgb(87, 86, 86); padding:15px; background-color:rgb(168, 168, 168);">
 
-            <h3>Employee Info: </h3>
+        <h3>Employee Info: </h3>
             <p id="info" style="font-family:Courier New, monospace;"><i>Information will be loaded once above form is filled.</i></p>
             <!---NOTES FOR TESTING:
                     *below is where the form values (and new values processed by the js) will be displayed-->
             <p id="check" style="font-family:Courier New, monospace; width:220px; text-align:right;"></p>
-        </div>
+    </div>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
         <!--NOTES FOR TESTING:
                 *clicking the below button will trigger a call to the submitNow()
@@ -107,8 +107,10 @@
     <script>
         //edit the below statement to select the #enter-button id from the HTML file
         document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
-        
-        
+        var body = document.querySelector(`body`)
+        body.id = `main-body`
+        console.log(body)
+
 
         function alertName(e)
         {
@@ -116,38 +118,46 @@
 
             //USE THE FOLLOWING VARIABLE NAMES:
             //fname --> first name: #first
+            var fname = document.querySelector(`#first`).value
             //lname --> last name: #last
+            var lname = document.querySelector(`#last`).value
             //hours --> hours worked, #hours
+            var hours = document.querySelector(`#hours`).value
             //rate --> hourly rate, #rate 
-            
-
+            var rate = document.querySelector(`#rate`).value
 
             //console.log() all four values
             
-            console.log()
-            console.log()
-            console.log()
-            console.log()
+            console.log(`first: ${fname}`)
+            console.log(`last: ${lname}`)
+            console.log(`hours: ${hours}`)
+            console.log(`rate: ${rate}`)
 
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
-            var full 
+            var full = fname + ` ` + lname
 
             //console.log() the full name value
-            console.log()
+            console.log(full)
 
 
             //convert both hours and rate to Number() data types
-            
+            hours = Number(hours)
+            rate = Number(rate)
 
 
-            //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build! 
+            //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build!
+            info.innerHTML += `<p><br>Here is the information you enetered<br> <br> First Name: ${fname} <br> <br> Last Name: ${lname} <br> <br> Hours Worked: ${hours} <br> <br> Hourly Rate: $${rate} </p>` 
 
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
-            
+            var grossPay = rate * hours
+            var taxAmount = grossPay * 20/100
+            var netPay = grossPay - taxAmount
 
             //console.log() all three processed values, rounded to the second decimal place
-            console.log().toFixed(2)
+            console.log(`Gross Pay: = $${grossPay.toFixed(2)}`)
+            console.log(`Taxes: = $${taxAmount.toFixed(2)}`)
+            console.log(`Net Pay: = $${netPay.toFixed(2)}`)
 
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
