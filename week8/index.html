@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ken Pierson">
+    <meta name="description" content="W8 | Data Structures">
+
+    <title>"W8 | Data Structures</title>
+</head>
+<body>
+    <h1>Wb - Data Structures in Javascript</h1>
+    <h3>Arrays, Associative Arrays, and Objects!</h3>
+
+    <div id="output">
+        <!--This div will hold content created in JS and written to the page here-->
+    </div>
+    
+    <!--In Document Javascript Below-->
+    <script>
+        //Standard Arrays----------------------------------------------------------------
+
+        //create a new populated array
+        var people = [
+            "Katie",
+            "Ken",
+            "Tyler",
+            "Hailey",
+            "Keenan",
+            "Andrew",
+            "Jayda",
+            "Elijah"
+        ]
+
+        console.log(`Array: ${people}`)  //entire collection of data
+        console.log(`First Value of Array: ${people[0]}`) //one value within the array
+        //arrayName[index] --> name + key = value
+
+        //you can store a single value back into a var
+        var firstPerson = people[0]
+        console.log(`firstPerson of Array: ${firstPerson}`)
+
+        //accessing last value in an array --> "length of Array -1"
+        //all arrays are a TYPE of OBJECT which inherently have data relate properties
+        console.log(`Last Value of Array: ${people[people.length - 1]}`)
+        console.log(`Total number of names in people Array: ${people.length}`)
+
+        //change the first person's name in the people array
+        people[0] = "Katharine"
+
+        //add a value to an array --> .push() --> this is a sub-function (method) of array types - this is the same as .append() in Python
+        //.push() will add a value to the End of an array
+        people.push("Cameron")
+        console.log(`Array: ${people}\nArray Length: ${people.length}`) 
+
+        people.push(prompt("Enter your name to be added: "))
+        console.log(`Array: ${people}\nArray Length: ${people.length}`)
+
+        //Paralell Standard 1D Arrays------------------------------------------------------
+
+        var faveMovies = [
+            "Empire Records",
+            "Fight Club",
+            "Interstellar",
+            "Pitch Perfect",
+            "Inception",
+            "Surf's Up",
+            "Sinners",
+            "Alien",
+            "Hackers",
+            "Fave Movie"
+        ]
+
+        //Processing through Arrays
+
+        var output = document.querySelector("#output")
+
+        for(let index = 0; index < people.length; index++)
+        {
+            //first: Block scope variable placeholder for key/index and string value
+            //second: Condition of loop
+            //third: incrementation of index value per loop, index++ --> index += 1
+
+            console.log(`${people[index]}'s Favorite Movie is: ${faveMovies[index]}`)
+
+            //write the info to the HTML's #output
+            output.innerHTML += `<p> ${people[index]}'s Favorite Movie is: <i>${faveMovies[index]}</i></p>`
+        }
+        
+        //Associative Arrays---------------------------------------------------------------
+
+        //Objects--------------------------------------------------------------------------
+
+    </script>
+</body>
+</html>
