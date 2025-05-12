@@ -107,9 +107,6 @@
     <script>
         //edit the below statement to select the #enter-button id from the HTML file
         document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
-        var body = document.querySelector(`body`)
-        body.id = `main-body`
-        console.log(body)
 
 
         function alertName(e)
@@ -146,7 +143,6 @@
 
 
             //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build!
-            info.innerHTML = `<p>First Name: ${fname} <br> Last Name: ${lname} <br> Hours Worked: ${hours} <br> Hourly Rate: $${rate.toFixed(2)} </p>` 
 
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
@@ -161,22 +157,22 @@
 
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = ``
+            var finalMessage = `${full} <br>Hours Worked: ${hours}<br>Hourly Rate: $${rate.toFixed(2)}`
 
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
-            
+            var info = document.querySelector(`#info`)
 
             //create a new var called 'num' and store the entire #check *HTML element* to it
-            
+            var num = document.querySelector(`#check`)
             
 
             //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
 
-            
+            info.innerHTML = finalMessage
 
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
-
+            num.innerHTML = `Gross Pay: $${gross.toFixed(2)} <br> Taxes: $${taxAmount.toFixed(2)} <br> Net Pay: $${net.toFixed(2)}`
             
 
 
