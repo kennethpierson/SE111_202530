@@ -99,15 +99,11 @@
                 *clicking the below button will trigger a call to the submitNow()
                 *success will be determined if correct info is displayed in the alert()-->
         <h3><i>If the above information is correct, please press "SUBMIT"</i></h3>
-        <input type="button" id="submit" value="SUBMIT">
-
-        
-    
+        <input type="button" id="submit" value="SUBMIT">     
 
     <script>
         //edit the below statement to select the #enter-button id from the HTML file
         document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
-
 
         function alertName(e)
         {
@@ -136,11 +132,9 @@
             //console.log() the full name value
             console.log(full)
 
-
             //convert both hours and rate to Number() data types
             hours = Number(hours)
             rate = Number(rate)
-
 
             //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build!
 
@@ -155,27 +149,23 @@
             console.log(taxAmount.toFixed(2))
             console.log(net.toFixed(2))
 
-
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = `${full} <br>Hours Worked: ${hours}<br>Hourly Rate: $${rate.toFixed(2)}`
-
+            var finalMessage = `${full}<br> Hours Worked: ${hours}<br> Hourly Rate: $${rate.toFixed(2)}`
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
             var info = document.querySelector(`#info`)
 
             //create a new var called 'num' and store the entire #check *HTML element* to it
             var num = document.querySelector(`#check`)
-            
-
+           
             //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
 
             info.innerHTML = finalMessage
 
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
+
             num.innerHTML = `Gross Pay: $${gross.toFixed(2)} <br> Taxes: $${taxAmount.toFixed(2)} <br> Net Pay: $${net.toFixed(2)}`
             
-
-
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
             
@@ -183,7 +173,6 @@
         
             function submitNow(e)
             {
-
                 /*NOTE FOR TESTING:
                     *if written correctly, you will see an alert() with all info entered as well as processed!*/
 
