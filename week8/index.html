@@ -167,7 +167,7 @@
             enemy //fight[1]
         ]
 
-        //creating an empty string to add data to during loppception
+        //creating an empty string to add data to during loopception
         var dndOutput = ``
 
         //process the data structure!
@@ -177,7 +177,7 @@
             //this outter for loop controls which array value (object) we are doing stuff to
             dndOutput += `<hr><h3>INFO FOR: ${fight[i].name} </h3>`
 
-            //inner loop will look at eaacah key in the CURRENT OBJECT - fight[i]
+            //inner loop will look at each key in the CURRENT OBJECT - fight[i]
             for(let key in fight[i])
             {
                 dndOutput += `<p><b>${key}:</b> ${fight[i][key]}</p>`
