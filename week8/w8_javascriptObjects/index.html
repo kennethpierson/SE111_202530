@@ -43,7 +43,7 @@
 		var output = document.querySelector("#output")
 
 		//Make an array to store the people
-		var people = ["Ken Pierson"]
+		var people = []
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
 		document.querySelector(`#button`).addEventListener(`click`, calcAndDisplay)
@@ -74,17 +74,12 @@
 				first: document.getElementById('first').value, 
 				last: document.getElementById('last').value,
             }//end of person object
-
 			console.log(`Person First Object: ${person.first}`)
 			console.log(`Person Last Object: ${person.last}`)
-
-
+			
 			//Add the person object into the people array by using the .push() array method.
 			people.push(person)
-			console.log(`People Array: ${people}`)
 			
-
-
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
 			{
@@ -100,7 +95,7 @@
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
-			console.log(`People: ${people}`)
+			console.log(people)
 
 			//create a variable called 'output' that has an empty string value stored to 
 			var output = ``
@@ -108,7 +103,7 @@
 			//Loop through the objects in the people array
 			for(let i = 0; i < people.length; i++)
             {
-				output += `<h3>First: ${people[i].first} </h3>`
+				output += `<h3>First: ${people[i].first}<br> Last: ${people[i].last} </h3>`
 				//Loop through each property in the object
 				for(key in people[i])
                 {
@@ -116,7 +111,7 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-					output += `<p><b>${key}:</b> ${people[i][key]}</p>`
+					output += `<p>${key}:</b> ${people[i][key]}</p>`
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
@@ -129,7 +124,7 @@
 				//replace the outputDiv's inner HTML with the output string
 				
 		}
-		
+		document.querySelector(`#output`).innerHTML = output
     </script>
     
 </body>
