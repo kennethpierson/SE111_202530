@@ -38,9 +38,10 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		var first = document.querySelector(`#first`).value
-		var last = document.querySelector(`#last`).value
-		var output = document.querySelector("#output")
+		var first = document.querySelector(`#first`)
+		var last = document.querySelector(`#last`)
+		var display = document.querySelector("#output")
+		var button = document.querySelector(`#button`)
 
 		//Make an array to store the people
 		var people = []
@@ -71,12 +72,10 @@
 				//2. last: will be a string that uses the last Input's value
 
             var person = {
-				first: document.getElementById('first').value, 
-				last: document.getElementById('last').value,
+				first: first.value, 
+				last: last.value,
             }//end of person object
-			console.log(`Person First Object: ${person.first}`)
-			console.log(`Person Last Object: ${person.last}`)
-			
+						
 			//Add the person object into the people array by using the .push() array method.
 			people.push(person)
 			
@@ -103,7 +102,6 @@
 			//Loop through the objects in the people array
 			for(let i = 0; i < people.length; i++)
             {
-				output += `<h3>First: ${people[i].first}<br> Last: ${people[i].last} </h3>`
 				//Loop through each property in the object
 				for(key in people[i])
                 {
@@ -111,7 +109,7 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-					output += `<p>${key}:</b> ${people[i][key]}</p>`
+					output += `<p>${key.toUpperCase()}:</b> ${people[i][key].toUpperCase()}</p>`
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
@@ -121,10 +119,11 @@
 			}//end of loop going through people array to edit 'output'
 
 				//log the output string
+				console.log(output)
 				//replace the outputDiv's inner HTML with the output string
-				
+				display.innerHTML = output
 		}
-		document.querySelector(`#output`).innerHTML = output
+		
     </script>
     
 </body>
